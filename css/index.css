@@ -1,0 +1,228 @@
+body{
+    margin: 0 auto;
+    min-width: auto;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header ul {
+    display: flex;
+    align-items: center;
+    padding-right: 60px;
+}
+.header ul li {
+    margin-right: 10px;
+}
+.header ul li a {
+    text-decoration: none;
+
+}
+
+.border{
+    width: 1px;
+    height: 20px;
+    border-radius: 15%;
+    background: rgb(141, 141, 141);
+    margin-right: 10px;
+}
+
+.logo{
+    margin-left: 50px;
+}
+.title{
+    padding-top: 120px;
+    display: flex;
+    justify-content: center;
+}
+.titleWord{
+    margin-top: 60px;
+    padding-right: 20px;
+}
+.titleWord h2{
+    font-size: 36px;
+    font-weight: 450;
+}
+.titleWord p {
+    padding-top: 20px;
+    color: rgb(162, 162, 162);
+    font-size: 16px;
+    line-height: 25px;
+}
+.title img{
+    width: 480px;
+    height: 240px;
+}
+.app{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+.app img{   
+    height: 200px;
+    width: 360px;
+}
+.findapp{
+    clip-path: polygon(0 9%, 100% 0, 100% 79%, 0 93%);
+    background: #F5F5FF;
+    display: flex;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+}
+.findappWord{
+    padding-left: 120px;
+}
+.findappWord h2{
+    font-size: 24px;
+    font-weight:500;
+    padding-bottom: 20px;
+}
+.findappWord p{
+    color: rgb(162, 162, 162);
+}
+.findappWord a img{
+    width: 120px;
+    height: 45px;
+    padding-top: 20px;
+}
+.findapp img{
+    height: 360px;
+    width: 360px;
+}
+.chosen{
+    text-align: center;
+}
+.chosen h2{
+    font-size: 36px;
+}
+.chosen a img{
+    margin-top: 20px;
+    width: 320px;
+    height: 300px;
+}
+.undefindedApp{
+    clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 100%);
+    background: #F9F9FA;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 500px;
+}
+.undefindedApp h2{
+    font-size: 24px;
+    font-weight:500;
+    letter-spacing:3px;
+    padding-top: 10px;
+}
+.undefindedApp p{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: rgb(162, 162, 162);
+    letter-spacing: 3px;
+}
+.undefindedApp a img{
+    width: 120px;
+}
+.wishman{
+    margin-top: 120px;
+    height: 360px;
+    width: 360px;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+    background: #F2F2F5;
+    height: 100px;
+    margin-top: -0px;
+}
+.footerlogo{
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+.footer ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 120px;
+}
+.footer ul li{
+    margin-right: 20px;
+}
+.footer ul li a {
+    text-decoration: none;
+}
+.icon{
+    margin-left: -20px;
+}
+
+.burgerIcon {
+    position: absolute;
+    right: 0;
+    display: none; /* 默认隐藏 */
+    cursor: pointer;
+}
+
+.mobileList{
+    position: relative;
+}
+.burgerIcon {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    /* 垂直居中 */
+    top: 50%;
+    transform: translateY(-50%);
+}
+.mobile {
+    display: none;
+    
+}
+input {
+    display: none;
+}
+.mobileMenu{
+    
+    position: fixed; /* 使用fixed定位确保菜单可以横向铺满整个屏幕 */
+    top: 60px; /* 根据您的布局，这可能需要调整 */
+    left: 0;
+    right: 0;
+    width: 100%; /* 使菜单横向铺满整个屏幕 */
+    height: 100%;
+    list-style-type: none;
+    padding: 0;
+    background: #F2F2F5;
+    z-index: 1000;
+}
+.mobileMenu ul {
+    display: flex;
+    flex-direction: column;
+    line-height: 60px;
+    font-size: 36px;
+    color: white;
+}
+
+/* 当屏幕宽度小于或等于 375px 时显示漢堡選單和菜单 */
+@media(max-width: 375px) {
+    .burgerIcon {
+        display: block;
+    }
+    input {
+        display: none;
+    }
+    #burger:checked ~ .mobile {
+        display: block;
+    }
+  
+    .desktop {
+        display: none;
+    }
+}
+
+
+
