@@ -209,6 +209,87 @@ input {
 
 /* 当屏幕宽度小于或等于 375px 时显示漢堡選單和菜单 */
 @media(max-width: 375px) {
+    .header ul {
+        display: flex;
+        align-items: center;
+        padding-right: 0; /* 从60px调整为0 */
+    }
+    .titleWord{
+        display: flex;
+        flex-direction: column;
+        margin-left: 60px;
+    }
+    .app{
+        display: flex;
+        flex-direction: column;
+    }
+    .findapp{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 200px;
+        height: 1000px;
+    }
+    .findappWord{
+        position: absolute;
+        top:700px;
+        right: 50px;
+        width: 250px;
+    }
+    .findappWord h2{
+        font-size: 36px;
+    }
+    .findappWord a{
+        padding-left: 50px;
+    }
+    .title img{
+        width: 400px;
+        height: 250px;
+    }
+    .title{
+        display: flex;
+        flex-direction: column;
+    }
+    .undefindedApp{
+        display: flex;
+        flex-direction: column-reverse;
+        height: 500px;
+    }
+    .undefindedAppWord{
+        text-align:center;
+    }
+   
+    .footer{
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+        height: 410px;
+        line-height: 50px;
+    }
+    .border{
+        display: none;
+    }
+    .footerlogo{
+        padding-top: 10px;
+    }
+    .footer ul {
+        display: flex;
+        flex-direction: column;
+        padding-left: 120px;
+        margin-bottom: 20px;
+    }
+    
+    .footericon{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .icon {
+        margin-left: 20px;
+    }
+    .wishman{
+        width: 200px;
+        height: 200px;
+    }
     .burgerIcon {
         display: block;
     }
