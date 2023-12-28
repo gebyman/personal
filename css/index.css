@@ -170,54 +170,22 @@ body{
     margin-left: -20px;
 }
 
-.burgerIcon {
-    position: absolute;
-    right: 0;
-    display: none; /* 默认隐藏 */
-    cursor: pointer;
-}
-
-.mobileList{
+.footericon{
     position: relative;
 }
-.burgerIcon {
+.marker{
     position: absolute;
-    right: 0;
-    cursor: pointer;
-    /* 垂直居中 */
-    top: 50%;
-    transform: translateY(-50%);
-    transition:  0.3s ease;
-}
-.mobile {
-    display: none;
-    
+    display: flex;
+    bottom:-40px;
+    right: 900px;
 }
 
-.mobileMenu{
-    position: fixed; /* 使用fixed定位确保菜单可以横向铺满整个屏幕 */
-    top: 50px; /* 根据您的布局，这可能需要调整 */
-    left: 0;
-    right: 0;
-    width: 100%; /* 使菜单横向铺满整个屏幕 */
-    height: 100%;
-    list-style-type: none;
-    padding: 0;
-    background: #F2F2F5;
-    z-index: 1000;
-    transition: transform .3s ease-in-out;
-}
-.mobileMenu ul {
-    display: flex;
-    flex-direction: column;
-    line-height: 60px;
-    font-size: 36px;
-    color: white;
-}
 #toggler{
     display: none;
 }
-
+.headerham{
+    display: none;
+}
 
 
 /* 当屏幕宽度小于或等于 375px 时显示漢堡選單和菜单 */
@@ -229,7 +197,7 @@ body{
         background-color: #fff;
         height: 44px;
         padding: 0 18px;
-       
+       display: block;
     }
    .header{
     position: relative;
@@ -310,15 +278,24 @@ body{
     .footer ul {
         display: flex;
         flex-direction: column;
-        padding-left: 120px;
-        margin-bottom: 20px;
+        margin-left: 120px;
+        margin-bottom: 120px;
     }
     .footer ul li {
         font-weight: bold;
     }
     .footericon{
+        position: relative;
         display: flex;
         flex-direction: column-reverse;
+        
+    }
+    .marker{
+        position: absolute;
+        display: flex;
+        bottom:-0px;
+        right: 30px;
+      
     }
     .icon {
         margin-left: 20px;
