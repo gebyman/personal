@@ -47,3 +47,11 @@ burgerBtn.addEventListener('click', function(e) {
         isMenuCreated = false;
     }
 });
+document.querySelector('.burgerIcon').addEventListener('click', function() {
+    const mobileMenu = document.querySelector('.mobileMenu');
+    if (mobileMenu.classList.contains('active')) {
+        mobileMenu.classList.remove('active');
+    } else {
+        mobileMenu.classList.add('active');
+    }
+});

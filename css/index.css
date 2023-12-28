@@ -1,3 +1,7 @@
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+body{
+  font-family: 'cwTeXYen', sans-serif;
+}
 body{
     margin: 0 auto;
     min-width: auto;
@@ -40,6 +44,7 @@ body{
 .titleWord{
     margin-top: 60px;
     padding-right: 20px;
+    font-family: 'cwTeXYen', sans-serif;
 }
 .titleWord h2{
     font-size: 36px;
@@ -74,6 +79,7 @@ body{
 }
 .findappWord{
     padding-left: 120px;
+    font-family: 'cwTeXYen', sans-serif;
 }
 .findappWord h2{
     font-size: 24px;
@@ -116,12 +122,14 @@ body{
     font-weight:500;
     letter-spacing:3px;
     padding-top: 10px;
+    font-family: 'cwTeXYen', sans-serif;
 }
 .undefindedApp p{
     padding-top: 20px;
     padding-bottom: 20px;
     color: rgb(162, 162, 162);
     letter-spacing: 3px;
+    font-family: 'cwTeXYen', sans-serif;
 }
 .undefindedApp a img{
     width: 120px;
@@ -156,6 +164,7 @@ body{
 }
 .footer ul li a {
     text-decoration: none;
+    font-family: 'cwTeXYen', sans-serif;
 }
 .icon{
     margin-left: -20px;
@@ -178,18 +187,16 @@ body{
     /* 垂直居中 */
     top: 50%;
     transform: translateY(-50%);
+    transition:  0.3s ease;
 }
 .mobile {
     display: none;
     
 }
-input {
-    display: none;
-}
+
 .mobileMenu{
-    
     position: fixed; /* 使用fixed定位确保菜单可以横向铺满整个屏幕 */
-    top: 60px; /* 根据您的布局，这可能需要调整 */
+    top: 50px; /* 根据您的布局，这可能需要调整 */
     left: 0;
     right: 0;
     width: 100%; /* 使菜单横向铺满整个屏幕 */
@@ -198,6 +205,7 @@ input {
     padding: 0;
     background: #F2F2F5;
     z-index: 1000;
+    transition: transform .3s ease-in-out;
 }
 .mobileMenu ul {
     display: flex;
@@ -206,18 +214,39 @@ input {
     font-size: 36px;
     color: white;
 }
+#toggler{
+    display: none;
+}
+
+
 
 /* 当屏幕宽度小于或等于 375px 时显示漢堡選單和菜单 */
 @media(max-width: 375px) {
-    .header ul {
-        display: flex;
-        align-items: center;
-        padding-right: 0; /* 从60px调整为0 */
+    .desktop {
+        display: none;
     }
+    .headerham{
+        background-color: #fff;
+        height: 44px;
+        padding: 0 18px;
+       
+    }
+   .header{
+    position: relative;
+   }
+   .logo{
+    position: absolute;
+    left:-50px;
+   }
+
     .titleWord{
         display: flex;
         flex-direction: column;
-        margin-left: 60px;
+        text-align: center;
+        margin-left: 20px;
+    }
+    .titleWord p {
+        font-size: 13px;
     }
     .app{
         display: flex;
@@ -231,6 +260,7 @@ input {
         height: 1000px;
     }
     .findappWord{
+        text-align: center;
         position: absolute;
         top:700px;
         right: 50px;
@@ -239,14 +269,14 @@ input {
     .findappWord h2{
         font-size: 36px;
     }
-    .findappWord a{
-        padding-left: 50px;
-    }
+   
     .title img{
-        width: 400px;
+        width: 300px;
         height: 250px;
+        margin-left: 20px;
     }
     .title{
+        margin-top: -120px;
         display: flex;
         flex-direction: column;
     }
@@ -258,7 +288,12 @@ input {
     .undefindedAppWord{
         text-align:center;
     }
-   
+    
+    .app img{   
+        height: 200px;
+        width: 300px;
+        margin-left: 20px;
+    }
     .footer{
         display: flex;
         flex-direction: column;
@@ -278,7 +313,9 @@ input {
         padding-left: 120px;
         margin-bottom: 20px;
     }
-    
+    .footer ul li {
+        font-weight: bold;
+    }
     .footericon{
         display: flex;
         flex-direction: column-reverse;
@@ -290,18 +327,68 @@ input {
         width: 200px;
         height: 200px;
     }
-    .burgerIcon {
+    .hamburger-container{
+        width: 20px;
+        height: 20px;
         display: block;
+        position:relative;
+        top: 16px;
+        
     }
-    input {
-        display: none;
+    .hamburger-container span {
+        display: block;
+        height: 1px;
+        background: #000;
+        position: relative;
+        transition:transform .3s ease-in-out , top .3s ease-in-out .3s;
+        top:0;
+    }
+    #toggler:checked + label .hamburger-container span:nth-child(1){
+        transform: rotate(45deg);
+        top: 4px;
+        transition: top .3s ease-in-out, transform .3s ease-in-out.3s;
+        /* 先把線條重疊再交叉 */
+    }
+    #toggler:checked + label .hamburger-container span:nth-child(2){
+        transform: rotate(-45deg);
+        top: -4px;
+        transition: top .3s ease-in-out, transform .3s ease-in-out.3s;
+    }
+    .hamburger-container span:nth-child(2){
+        margin-top: 7px;
     }
     #burger:checked ~ .mobile {
         display: block;
     }
   
-    .desktop {
-        display: none;
+   
+    .nav-items{
+        background-color:#f5f5ff;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 44px;
+        left: 0;
+        transform: scaleY(0);
+        transition: transform .3s ease-in-out .3s, opacity .3s ease-in-out .3s;
+        transform-origin: 50% 0 ;
+        opacity: 0;
+        
+    }
+    #toggler:checked ~ .nav-items{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+    .nav-items ul {
+        display: flex;
+        flex-direction: column;
+        margin-left: 80px;
+        margin-top: 30px;
+    }
+    .nav-items ul li {
+        line-height: 60px;
+        font-size: 36px;
+        font-weight: bold;
     }
 }
 
