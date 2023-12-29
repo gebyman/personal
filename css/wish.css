@@ -33,7 +33,26 @@ body{
     background: rgb(141, 141, 141);
     margin-right: 10px;
 }
+.wrap{
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    flex-grow: 1;
+}
+.wrap h2{
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+.wrap p{
+    font-size: 20px;
+    line-height: 30px;
+}
+.wrapWord img{
+    padding-top: 20px;
 
+}
 .logo{
     margin-left: 50px;
 }
@@ -85,4 +104,1057 @@ body{
 }
 .headerham{
     display: none;
+}
+@media(max-width:1320px){
+    .desktop {
+        display: none;
+    }
+    .headerham{
+        background-color: #fff;
+        height: 44px;
+        padding: 0 18px;
+       display: block;
+    }
+   .header{
+    position: relative;
+   }
+   .logo{
+    position: absolute;
+    left:-50px;
+   }
+   .wrap{
+    margin: 40px;
+   }
+   
+    .footer{
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+        height: 410px;
+        line-height: 50px;
+    }
+    .border{
+        display: none;
+    }
+    .footerlogo{
+        padding-top: 10px;
+    }
+    .footer ul {
+        display: flex;
+        flex-direction: column;
+        margin-left: 120px;
+        margin-bottom: 120px;
+    }
+    .footer ul li {
+        font-weight: bold;
+    }
+    .footericon{
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+        
+    }
+    .marker{
+        position: absolute;
+        display: flex;
+        bottom:-0px;
+        right: 30px;
+      
+    }
+    .icon {
+        margin-left: 20px;
+    }
+    .wishman{
+        width: 200px;
+        height: 200px;
+    }
+    .hamburger-container{
+        width: 20px;
+        height: 20px;
+        display: block;
+        position:relative;
+        top: 16px;
+        
+    }
+    .hamburger-container span {
+        display: block;
+        height: 1px;
+        background: #000;
+        position: relative;
+        transition:transform .3s ease-in-out , top .3s ease-in-out .3s;
+        top:0;
+    }
+    #toggler:checked + label .hamburger-container span:nth-child(1){
+        transform: rotate(45deg);
+        top: 4px;
+        transition: top .3s ease-in-out, transform .3s ease-in-out.3s;
+        /* 先把線條重疊再交叉 */
+    }
+    #toggler:checked + label .hamburger-container span:nth-child(2){
+        transform: rotate(-45deg);
+        top: -4px;
+        transition: top .3s ease-in-out, transform .3s ease-in-out.3s;
+    }
+    .hamburger-container span:nth-child(2){
+        margin-top: 7px;
+    }
+    #burger:checked ~ .mobile {
+        display: block;
+    }
+  
+   
+    .nav-items{
+        background-color:#f5f5ff;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 44px;
+        left: 0;
+        transform: scaleY(0);
+        transition: transform .3s ease-in-out .3s, opacity .3s ease-in-out .3s;
+        transform-origin: 50% 0 ;
+        opacity: 0;
+        
+    }
+    #toggler:checked ~ .nav-items{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+    .nav-items ul {
+        display: flex;
+        flex-direction: column;
+        margin-left: 80px;
+        margin-top: 30px;
+    }
+    .nav-items ul li {
+        line-height: 60px;
+        font-size: 36px;
+        font-weight: bold;
+    }
+}
+@media(max-width:1090px){
+    .desktop {
+        display: none;
+    }
+    .headerham{
+        background-color: #fff;
+        height: 44px;
+        padding: 0 18px;
+       display: block;
+    }
+   .header{
+    position: relative;
+   }
+   .logo{
+    position: absolute;
+    left:-50px;
+   }
+   .wrap{
+    margin: 40px;
+   }
+   
+    .footer{
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+        height: 410px;
+        line-height: 50px;
+    }
+    .border{
+        display: none;
+    }
+    .footerlogo{
+        padding-top: 10px;
+    }
+    .footer ul {
+        display: flex;
+        flex-direction: column;
+        margin-left: 120px;
+        margin-bottom: 120px;
+    }
+    .footer ul li {
+        font-weight: bold;
+    }
+    .footericon{
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+        
+    }
+    .marker{
+        position: absolute;
+        display: flex;
+        bottom:-0px;
+        right: 30px;
+      
+    }
+    .icon {
+        margin-left: 20px;
+    }
+    .wishman{
+        width: 200px;
+        height: 200px;
+    }
+    .hamburger-container{
+        width: 20px;
+        height: 20px;
+        display: block;
+        position:relative;
+        top: 16px;
+        
+    }
+    .hamburger-container span {
+        display: block;
+        height: 1px;
+        background: #000;
+        position: relative;
+        transition:transform .3s ease-in-out , top .3s ease-in-out .3s;
+        top:0;
+    }
+    #toggler:checked + label .hamburger-container span:nth-child(1){
+        transform: rotate(45deg);
+        top: 4px;
+        transition: top .3s ease-in-out, transform .3s ease-in-out.3s;
+        /* 先把線條重疊再交叉 */
+    }
+    #toggler:checked + label .hamburger-container span:nth-child(2){
+        transform: rotate(-45deg);
+        top: -4px;
+        transition: top .3s ease-in-out, transform .3s ease-in-out.3s;
+    }
+    .hamburger-container span:nth-child(2){
+        margin-top: 7px;
+    }
+    #burger:checked ~ .mobile {
+        display: block;
+    }
+  
+   
+    .nav-items{
+        background-color:#f5f5ff;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 44px;
+        left: 0;
+        transform: scaleY(0);
+        transition: transform .3s ease-in-out .3s, opacity .3s ease-in-out .3s;
+        transform-origin: 50% 0 ;
+        opacity: 0;
+        
+    }
+    #toggler:checked ~ .nav-items{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+    .nav-items ul {
+        display: flex;
+        flex-direction: column;
+        margin-left: 80px;
+        margin-top: 30px;
+    }
+    .nav-items ul li {
+        line-height: 60px;
+        font-size: 36px;
+        font-weight: bold;
+    }
+}
+@media(max-width:1000px){
+    .desktop {
+        display: none;
+    }
+    .headerham{
+        background-color: #fff;
+        height: 44px;
+        padding: 0 18px;
+       display: block;
+    }
+   .header{
+    position: relative;
+   }
+   .logo{
+    position: absolute;
+    left:-50px;
+   }
+   .wrap{
+    margin: 40px;
+   }
+   
+    .footer{
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+        height: 410px;
+        line-height: 50px;
+    }
+    .border{
+        display: none;
+    }
+    .footerlogo{
+        padding-top: 10px;
+    }
+    .footer ul {
+        display: flex;
+        flex-direction: column;
+        margin-left: 120px;
+        margin-bottom: 120px;
+    }
+    .footer ul li {
+        font-weight: bold;
+    }
+    .footericon{
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+        
+    }
+    .marker{
+        position: absolute;
+        display: flex;
+        bottom:-0px;
+        right: 30px;
+      
+    }
+    .icon {
+        margin-left: 20px;
+    }
+    .wishman{
+        width: 200px;
+        height: 200px;
+    }
+    .hamburger-container{
+        width: 20px;
+        height: 20px;
+        display: block;
+        position:relative;
+        top: 16px;
+        
+    }
+    .hamburger-container span {
+        display: block;
+        height: 1px;
+        background: #000;
+        position: relative;
+        transition:transform .3s ease-in-out , top .3s ease-in-out .3s;
+        top:0;
+    }
+    #toggler:checked + label .hamburger-container span:nth-child(1){
+        transform: rotate(45deg);
+        top: 4px;
+        transition: top .3s ease-in-out, transform .3s ease-in-out.3s;
+        /* 先把線條重疊再交叉 */
+    }
+    #toggler:checked + label .hamburger-container span:nth-child(2){
+        transform: rotate(-45deg);
+        top: -4px;
+        transition: top .3s ease-in-out, transform .3s ease-in-out.3s;
+    }
+    .hamburger-container span:nth-child(2){
+        margin-top: 7px;
+    }
+    #burger:checked ~ .mobile {
+        display: block;
+    }
+  
+   
+    .nav-items{
+        background-color:#f5f5ff;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 44px;
+        left: 0;
+        transform: scaleY(0);
+        transition: transform .3s ease-in-out .3s, opacity .3s ease-in-out .3s;
+        transform-origin: 50% 0 ;
+        opacity: 0;
+        
+    }
+    #toggler:checked ~ .nav-items{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+    .nav-items ul {
+        display: flex;
+        flex-direction: column;
+        margin-left: 80px;
+        margin-top: 30px;
+    }
+    .nav-items ul li {
+        line-height: 60px;
+        font-size: 36px;
+        font-weight: bold;
+    }
+}
+@media(max-width: 770px) {
+    .desktop {
+        display: none;
+    }
+    .headerham{
+        background-color: #fff;
+        height: 44px;
+        padding: 0 18px;
+       display: block;
+    }
+   .header{
+    position: relative;
+   }
+   .logo{
+    position: absolute;
+    left:-50px;
+   }
+   .wrap{
+    margin: 40px;
+   }
+   
+    .footer{
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+        height: 410px;
+        line-height: 50px;
+    }
+    .border{
+        display: none;
+    }
+    .footerlogo{
+        padding-top: 10px;
+    }
+    .footer ul {
+        display: flex;
+        flex-direction: column;
+        margin-left: 120px;
+        margin-bottom: 120px;
+    }
+    .footer ul li {
+        font-weight: bold;
+    }
+    .footericon{
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+        
+    }
+    .marker{
+        position: absolute;
+        display: flex;
+        bottom:-0px;
+        right: 30px;
+      
+    }
+    .wrap{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .wrapWord{
+        text-align: center;
+    }
+    .icon {
+        margin-left: 20px;
+    }
+    .wishman{
+        width: 200px;
+        height: 200px;
+    }
+    .hamburger-container{
+        width: 20px;
+        height: 20px;
+        display: block;
+        position:relative;
+        top: 16px;
+        
+    }
+    .hamburger-container span {
+        display: block;
+        height: 1px;
+        background: #000;
+        position: relative;
+        transition:transform .3s ease-in-out , top .3s ease-in-out .3s;
+        top:0;
+    }
+    #toggler:checked + label .hamburger-container span:nth-child(1){
+        transform: rotate(45deg);
+        top: 4px;
+        transition: top .3s ease-in-out, transform .3s ease-in-out.3s;
+        /* 先把線條重疊再交叉 */
+    }
+    #toggler:checked + label .hamburger-container span:nth-child(2){
+        transform: rotate(-45deg);
+        top: -4px;
+        transition: top .3s ease-in-out, transform .3s ease-in-out.3s;
+    }
+    .hamburger-container span:nth-child(2){
+        margin-top: 7px;
+    }
+    #burger:checked ~ .mobile {
+        display: block;
+    }
+  
+   
+    .nav-items{
+        background-color:#f5f5ff;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 44px;
+        left: 0;
+        transform: scaleY(0);
+        transition: transform .3s ease-in-out .3s, opacity .3s ease-in-out .3s;
+        transform-origin: 50% 0 ;
+        opacity: 0;
+        
+    }
+    #toggler:checked ~ .nav-items{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+    .nav-items ul {
+        display: flex;
+        flex-direction: column;
+        margin-left: 80px;
+        margin-top: 30px;
+    }
+    .nav-items ul li {
+        line-height: 60px;
+        font-size: 36px;
+        font-weight: bold;
+    }
+}
+@media(max-width: 570px) {
+    .desktop {
+        display: none;
+    }
+    .headerham{
+        background-color: #fff;
+        height: 44px;
+        padding: 0 18px;
+       display: block;
+    }
+   .header{
+    position: relative;
+   }
+   .logo{
+    position: absolute;
+    left:-50px;
+   }
+   .wrap{
+    margin: 40px;
+   }
+   
+    .footer{
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+        height: 410px;
+        line-height: 50px;
+    }
+    .border{
+        display: none;
+    }
+    .footerlogo{
+        padding-top: 10px;
+    }
+    .footer ul {
+        display: flex;
+        flex-direction: column;
+        margin-left: 120px;
+        margin-bottom: 120px;
+    }
+    .footer ul li {
+        font-weight: bold;
+    }
+    .footericon{
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+        
+    }
+    .marker{
+        position: absolute;
+        display: flex;
+        bottom:-0px;
+        right: 30px;
+      
+    }
+    .wrap{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .wrapWord{
+        text-align: center;
+    }
+    .icon {
+        margin-left: 20px;
+    }
+    .wishman{
+        width: 200px;
+        height: 200px;
+    }
+    .hamburger-container{
+        width: 20px;
+        height: 20px;
+        display: block;
+        position:relative;
+        top: 16px;
+        
+    }
+    .hamburger-container span {
+        display: block;
+        height: 1px;
+        background: #000;
+        position: relative;
+        transition:transform .3s ease-in-out , top .3s ease-in-out .3s;
+        top:0;
+    }
+    #toggler:checked + label .hamburger-container span:nth-child(1){
+        transform: rotate(45deg);
+        top: 4px;
+        transition: top .3s ease-in-out, transform .3s ease-in-out.3s;
+        /* 先把線條重疊再交叉 */
+    }
+    #toggler:checked + label .hamburger-container span:nth-child(2){
+        transform: rotate(-45deg);
+        top: -4px;
+        transition: top .3s ease-in-out, transform .3s ease-in-out.3s;
+    }
+    .hamburger-container span:nth-child(2){
+        margin-top: 7px;
+    }
+    #burger:checked ~ .mobile {
+        display: block;
+    }
+  
+   
+    .nav-items{
+        background-color:#f5f5ff;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 44px;
+        left: 0;
+        transform: scaleY(0);
+        transition: transform .3s ease-in-out .3s, opacity .3s ease-in-out .3s;
+        transform-origin: 50% 0 ;
+        opacity: 0;
+        
+    }
+    #toggler:checked ~ .nav-items{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+    .nav-items ul {
+        display: flex;
+        flex-direction: column;
+        margin-left: 80px;
+        margin-top: 30px;
+    }
+    .nav-items ul li {
+        line-height: 60px;
+        font-size: 36px;
+        font-weight: bold;
+    }
+}
+@media(max-width: 430px) {
+    .desktop {
+        display: none;
+    }
+    .headerham{
+        background-color: #fff;
+        height: 44px;
+        padding: 0 18px;
+       display: block;
+    }
+   .header{
+    position: relative;
+   }
+   .logo{
+    position: absolute;
+    left:-50px;
+   }
+   .wrap{
+    margin: 40px;
+   }
+   
+    .footer{
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+        height: 410px;
+        line-height: 50px;
+    }
+    .border{
+        display: none;
+    }
+    .footerlogo{
+        padding-top: 10px;
+    }
+    .footer ul {
+        display: flex;
+        flex-direction: column;
+        margin-left: 120px;
+        margin-bottom: 120px;
+    }
+    .footer ul li {
+        font-weight: bold;
+    }
+    .footericon{
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+        
+    }
+    .wrap{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .wrapWord{
+        text-align: center;
+    }
+    .marker{
+        position: absolute;
+        display: flex;
+        bottom:-0px;
+        right: 30px;
+      
+    }
+    .icon {
+        margin-left: 20px;
+    }
+    .wishman{
+        width: 200px;
+        height: 200px;
+    }
+    .hamburger-container{
+        width: 20px;
+        height: 20px;
+        display: block;
+        position:relative;
+        top: 16px;
+        
+    }
+    .hamburger-container span {
+        display: block;
+        height: 1px;
+        background: #000;
+        position: relative;
+        transition:transform .3s ease-in-out , top .3s ease-in-out .3s;
+        top:0;
+    }
+    #toggler:checked + label .hamburger-container span:nth-child(1){
+        transform: rotate(45deg);
+        top: 4px;
+        transition: top .3s ease-in-out, transform .3s ease-in-out.3s;
+        /* 先把線條重疊再交叉 */
+    }
+    #toggler:checked + label .hamburger-container span:nth-child(2){
+        transform: rotate(-45deg);
+        top: -4px;
+        transition: top .3s ease-in-out, transform .3s ease-in-out.3s;
+    }
+    .hamburger-container span:nth-child(2){
+        margin-top: 7px;
+    }
+    #burger:checked ~ .mobile {
+        display: block;
+    }
+  
+   
+    .nav-items{
+        background-color:#f5f5ff;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 44px;
+        left: 0;
+        transform: scaleY(0);
+        transition: transform .3s ease-in-out .3s, opacity .3s ease-in-out .3s;
+        transform-origin: 50% 0 ;
+        opacity: 0;
+        
+    }
+    #toggler:checked ~ .nav-items{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+    .nav-items ul {
+        display: flex;
+        flex-direction: column;
+        margin-left: 80px;
+        margin-top: 30px;
+    }
+    .nav-items ul li {
+        line-height: 60px;
+        font-size: 36px;
+        font-weight: bold;
+    }
+}
+@media(max-width: 390px) {
+    .desktop {
+        display: none;
+    }
+    .headerham{
+        background-color: #fff;
+        height: 44px;
+        padding: 0 18px;
+       display: block;
+    }
+   .header{
+    position: relative;
+   }
+   .logo{
+    position: absolute;
+    left:-50px;
+   }
+   .wrap{
+    margin: 40px;
+   }
+   
+    .footer{
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+        height: 410px;
+        line-height: 50px;
+    }
+    .border{
+        display: none;
+    }
+    .wrap{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .wrapWord{
+        text-align: center;
+    }
+    .footerlogo{
+        padding-top: 10px;
+    }
+    .footer ul {
+        display: flex;
+        flex-direction: column;
+        margin-left: 120px;
+        margin-bottom: 120px;
+    }
+    .footer ul li {
+        font-weight: bold;
+    }
+    .footericon{
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+        
+    }
+    .marker{
+        position: absolute;
+        display: flex;
+        bottom:-0px;
+        right: 30px;
+      
+    }
+    .icon {
+        margin-left: 20px;
+    }
+    .wishman{
+        width: 200px;
+        height: 200px;
+    }
+    .hamburger-container{
+        width: 20px;
+        height: 20px;
+        display: block;
+        position:relative;
+        top: 16px;
+        
+    }
+    .hamburger-container span {
+        display: block;
+        height: 1px;
+        background: #000;
+        position: relative;
+        transition:transform .3s ease-in-out , top .3s ease-in-out .3s;
+        top:0;
+    }
+    #toggler:checked + label .hamburger-container span:nth-child(1){
+        transform: rotate(45deg);
+        top: 4px;
+        transition: top .3s ease-in-out, transform .3s ease-in-out.3s;
+        /* 先把線條重疊再交叉 */
+    }
+    #toggler:checked + label .hamburger-container span:nth-child(2){
+        transform: rotate(-45deg);
+        top: -4px;
+        transition: top .3s ease-in-out, transform .3s ease-in-out.3s;
+    }
+    .hamburger-container span:nth-child(2){
+        margin-top: 7px;
+    }
+    #burger:checked ~ .mobile {
+        display: block;
+    }
+  
+   
+    .nav-items{
+        background-color:#f5f5ff;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 44px;
+        left: 0;
+        transform: scaleY(0);
+        transition: transform .3s ease-in-out .3s, opacity .3s ease-in-out .3s;
+        transform-origin: 50% 0 ;
+        opacity: 0;
+        
+    }
+    #toggler:checked ~ .nav-items{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+    .nav-items ul {
+        display: flex;
+        flex-direction: column;
+        margin-left: 80px;
+        margin-top: 30px;
+    }
+    .nav-items ul li {
+        line-height: 60px;
+        font-size: 36px;
+        font-weight: bold;
+    }
+}
+
+
+@media(max-width: 375px) {
+    .desktop {
+        display: none;
+    }
+    .headerham{
+        background-color: #fff;
+        height: 44px;
+        padding: 0 18px;
+       display: block;
+    }
+   .header{
+    position: relative;
+   }
+   .logo{
+    position: absolute;
+    left:-50px;
+   }
+   .wrap{
+    margin: 40px;
+   }
+   
+    .footer{
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+        height: 410px;
+        line-height: 50px;
+    }
+    .border{
+        display: none;
+    }
+    .footerlogo{
+        padding-top: 10px;
+    }
+    .footer ul {
+        display: flex;
+        flex-direction: column;
+        margin-left: 120px;
+        margin-bottom: 120px;
+    }
+    .wrap{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .wrapWord{
+        text-align: center;
+    }
+    .footer ul li {
+        font-weight: bold;
+    }
+    .footericon{
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+        
+    }
+    .marker{
+        position: absolute;
+        display: flex;
+        bottom:-0px;
+        right: 30px;
+      
+    }
+    .icon {
+        margin-left: 20px;
+    }
+    .wishman{
+        width: 200px;
+        height: 200px;
+    }
+    .hamburger-container{
+        width: 20px;
+        height: 20px;
+        display: block;
+        position:relative;
+        top: 16px;
+        
+    }
+    .hamburger-container span {
+        display: block;
+        height: 1px;
+        background: #000;
+        position: relative;
+        transition:transform .3s ease-in-out , top .3s ease-in-out .3s;
+        top:0;
+    }
+    #toggler:checked + label .hamburger-container span:nth-child(1){
+        transform: rotate(45deg);
+        top: 4px;
+        transition: top .3s ease-in-out, transform .3s ease-in-out.3s;
+        /* 先把線條重疊再交叉 */
+    }
+    #toggler:checked + label .hamburger-container span:nth-child(2){
+        transform: rotate(-45deg);
+        top: -4px;
+        transition: top .3s ease-in-out, transform .3s ease-in-out.3s;
+    }
+    .hamburger-container span:nth-child(2){
+        margin-top: 7px;
+    }
+    #burger:checked ~ .mobile {
+        display: block;
+    }
+  
+   
+    .nav-items{
+        background-color:#f5f5ff;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 44px;
+        left: 0;
+        transform: scaleY(0);
+        transition: transform .3s ease-in-out .3s, opacity .3s ease-in-out .3s;
+        transform-origin: 50% 0 ;
+        opacity: 0;
+        
+    }
+    #toggler:checked ~ .nav-items{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+    .nav-items ul {
+        display: flex;
+        flex-direction: column;
+        margin-left: 80px;
+        margin-top: 30px;
+    }
+    .nav-items ul li {
+        line-height: 60px;
+        font-size: 36px;
+        font-weight: bold;
+    }
 }
