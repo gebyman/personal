@@ -37,24 +37,7 @@ body{
 .logo{
     margin-left: 50px;
 }
-.wrap{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-    flex-grow: 1;
-}
-.wrap h2{
-    font-size: 42px;
-    margin-bottom: 20px;
-}
-.wrap p{
-    font-size: 20px;
-    line-height: 30px;
-}
-.wrapWord img{
-    padding-top: 30px;
-}
+
 .footer{
     box-shadow: 0px 2px 16px 0px rgba(37,43,57,0.1);
     display: flex;
