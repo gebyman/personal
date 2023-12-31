@@ -201,7 +201,11 @@ body{
   .star li:hover~li a {
     color: #ff0000; 
   }
-  
+.marker{
+    position: absolute;
+    top: 850px;
+    left: 280px;
+}
 .appList{
     position: relative;
     padding-top: 60px;
@@ -260,7 +264,11 @@ body{
 }
 
 .star1{
-    display: flex;flex-direction: row-reverse; position: relative; right: 30px;top: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    right: 140px;
+    top: 10px;
 }
 .star1 ul {
     transition-delay: 8s;
@@ -291,7 +299,11 @@ body{
   }
   
   .star2{
-    display: flex;flex-direction: row-reverse; position: relative; right: 30px;top: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative; 
+    right: 140px;
+    top: 10px;
 }
 .star2 ul {
     transition-delay: 8s;
@@ -322,7 +334,11 @@ body{
   }
 
   .star3{
-    display: flex;flex-direction: row-reverse; position: relative; right: 30px;top: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative; 
+    right:49px;
+    top: 10px;
 }
 .star3 ul {
     transition-delay: 8s;
@@ -355,7 +371,11 @@ body{
 
 
   .star4{
-    display: flex;flex-direction: row-reverse; position: relative; right: 30px;top: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    right: 50px;
+    top: 10px;
 }
 .star4 ul {
     transition-delay: 8s;
@@ -384,11 +404,52 @@ body{
   .star4 li:hover~li a {
     color: #ff0000; 
   }
-@media(max-width: 375px) {
+  .bookMark1{
+    position: absolute;
+    top: 70px;
+    right: 70px;
+}
+.download1{
+    position: absolute;
+    top: 130px;
+     right: 68px;
+}
+.bookMark2{
+    position: absolute;
+    top: 70px;
+    right: 70px;
+}
+.download2{
+    position: absolute;
+    top: 130px;
+     right: 70px;
+}
+.bookMark3{
+    position: absolute;
+    top: 70px;
+    right: 70px;
+}
+.download3{
+    position: absolute;
+    top: 130px;
+     right: 70px;
+}
+.bookMark4{
+    position: absolute;
+    top: 70px;
+    right: 70px;
+}
+.download4  {
+    position: absolute;
+    top: 130px;
+     right: 70px;
+}
+@media(max-width: 1320px) {
     body, html {
         margin: 0;
         padding: 0;
-        overflow-x: hidden; /* 這會隱藏水平滾動條，如果有的話 */
+        overflow-x: hidden;
+        
     }
     .desktop {
         display: none;
@@ -410,8 +471,7 @@ body{
     .footer{
         display: flex;
         flex-direction: column;
-        padding-top: 100px;
-        height: 410px;
+        height: 600px;
         line-height: 50px;
        position: relative;
        top: 200px;
@@ -427,6 +487,7 @@ body{
         flex-direction: column;
         margin-left: 120px;
         margin-bottom: 120px;
+        
     }
     
     .footer ul li {
@@ -436,14 +497,1104 @@ body{
         position: relative;
         display: flex;
         flex-direction: column-reverse;
-        
     }
     .marker{
         position: absolute;
         display: flex;
         bottom:-0px;
         right: 30px;
-      
+      top: 150px;
+      left: 40px;
+      padding-bottom: 100px;
+    }
+    .icon {
+        margin-left: 20px;
+    }
+    .wishman{
+        width: 200px;
+        height: 200px;
+    }
+    .hamburger-container{
+        width: 20px;
+        height: 20px;
+        display: block;
+        position:relative;
+        top: 16px;
+        
+        
+    }
+    .hamburger-container span {
+        display: block;
+        height: 1px;
+        background: #000;
+        position: relative;
+        transition:transform .3s ease-in-out , top .3s ease-in-out .3s;
+        top:0;
+    }
+    #toggler:checked + label .hamburger-container span:nth-child(1){
+        transform: rotate(45deg);
+        top: 4px;
+        transition: top .3s ease-in-out, transform .3s ease-in-out.3s;
+        /* 先把線條重疊再交叉 */
+    }
+    #toggler:checked + label .hamburger-container span:nth-child(2){
+        transform: rotate(-45deg);
+        top: -4px;
+        transition: top .3s ease-in-out, transform .3s ease-in-out.3s;
+    }
+    .hamburger-container span:nth-child(2){
+        margin-top: 7px;
+    }
+    #burger:checked ~ .mobile {
+        display: block;
+    }
+  
+   
+    .nav-items{
+        background-color:#f5f5ff;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 44px;
+        left: 0;
+        transform: scaleY(0);
+        transition: transform .3s ease-in-out .3s, opacity .3s ease-in-out .3s;
+        transform-origin: 50% 0 ;
+        opacity: 0;
+        z-index: 5000;
+    }
+    #toggler:checked ~ .nav-items{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+    .nav-items ul {
+        display: flex;
+        flex-direction: column;
+        margin-left: 80px;
+        margin-top: 30px;
+    }
+    .nav-items ul li {
+        line-height: 60px;
+        font-size: 36px;
+        font-weight: bold;
+    }
+
+    #search{
+        text-align: center;
+        position: relative;
+        top: -10px;
+        left: -255px;
+        width: 395px;
+        border-radius: 15px;
+    }
+    .findBtn{
+        display: none;
+    }
+    .search img{
+        position: absolute;
+        top: -1px;
+        right: 20px;
+        width: 25px;
+        height: 25px;
+    }
+    .left ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-left: 390px;
+        
+        
+    }
+    .left ul li{
+        display: flex;
+        padding-right: 11px;
+        margin-left: 10px;
+        top: -40px;
+        left: 30px;
+    }
+    .left a{
+        top: 125px;
+        right: 1px;
+    }
+    .left{
+        left: 0;
+        display: flex;
+    }
+    
+    .appList{
+        width: 10px;
+        height: 10px;
+        
+    }
+    .logoIcon{
+        width: 80px;
+        height: 80px;
+        left: -280px;
+        top: 210px;
+    }
+    .bookMark img{
+        width: 10px;
+        height: 10px;
+    }
+    .item{
+        top: 250px;
+    }
+    .bookMark{
+        position: absolute;
+        left: -210px;
+        top: 280px;
+    }
+    .freeApp{
+        position: relative;
+        top: 250px;
+        left: -270px;
+    }
+    
+    .download{
+        position: absolute;
+        left: -210px;
+        top: 310px;
+    }
+    .star {
+        position: relative;
+        top: 220px;
+        left: -220px;
+    }
+    .bold1{
+        display: flex;
+        line-height: 20px;
+        position: relative;
+        top: 220px;
+        left: -270px;
+        font-weight: bold;
+        width: 60px;
+        padding-top: 10px;
+    }
+    .bold2{
+        display: flex;
+        line-height: 20px;
+        position: relative;
+        top: 260px;
+        left: -280px;
+        font-weight: bold;
+        width: 100px;
+        padding-top: 10px;
+    }
+    .bold3{
+        display: flex;
+        line-height: 20px;
+        position: relative;
+        top: 180px;
+        left: -280px;
+        font-weight: bold;
+        width: 100px;
+        padding-top: 10px;
+    }
+    .bold4{
+        display: flex;
+        line-height: 20px;
+        position: relative;
+        top: 280px;
+        left: -280px;
+        font-weight: bold;
+        width: 100px;
+        padding-top: 10px;
+    }
+    .bold5{
+        display: flex;
+        line-height: 20px;
+        position: relative;
+        top: 380px;
+        left: -280px;
+        font-weight: bold;
+        width: 100px;
+        padding-top: 10px;
+    }
+    .vertical-lr{
+        writing-mode: vertical-lr;
+    }
+    .app2{
+        padding-top:100px;
+    }
+    .mt4{
+        margin-top: 4px;
+    }
+   .bookMark1{
+    position: absolute;
+    top: 315px;
+    left: -220px;
+   }
+   .download1{
+    position: absolute;
+    top: 360px;
+    left: -220px;
+   }
+   .star1 {
+    position: relative;
+    top: 250px;
+    left: -320px;
+}
+    .game{
+        position: absolute;
+        top: 520px;
+        right: 700px;
+    }
+    .food{
+        position: relative;
+        top: 260px;
+        right: 280px;
+    }
+    .app3{
+        position: absolute;
+        top: 230px;
+    }
+    .appList{
+        padding-bottom: 90px;
+    }
+    .bookMark2{
+        position: absolute;
+        top: 235px;
+        left: -220px;
+       }
+    .download2{
+        position: absolute;
+        top: 280px;
+        left: -220px;
+       }
+       .app4{
+        position: absolute;
+        top: 332px;
+       }
+       .app5{
+        position: absolute;
+        top: 103px;
+        left: -265px;
+       }
+       .bookMark3{
+        position: absolute;
+        top: 336px;
+        left: -220px;
+       }
+    .download3{
+        position: absolute;
+        top: 381px;
+        left: -220px;
+       }
+       .bookMark4{
+        position: absolute;
+        top: 107px;
+        left: -205px;
+       }
+    .download4{
+        position: absolute;
+        top: 151px;
+        left: -205px;
+       }
+       .star2{
+        position: relative;
+        top: 175px;
+        left: -320px;
+       }
+       .star3{
+        position: relative;
+        top: 275px;
+        left: -220px;
+       }
+       .star4{
+        position: relative;
+        top: 375px;
+        left: -205px;
+       }
+       
+}
+@media(max-width: 1090px) {
+    body, html {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        
+    }
+    .desktop {
+        display: none;
+    }
+    .headerham{
+        background-color: #fff;
+        height: 44px;
+        padding: 0 18px;
+       display: block;
+    }
+   .header{
+    position: relative;
+    background-color: #fff;
+   }
+   .logo{
+    position: absolute;
+    left:-50px;
+   }
+    .footer{
+        display: flex;
+        flex-direction: column;
+        height: 600px;
+        line-height: 50px;
+       position: relative;
+       top: 200px;
+    }
+    .border{
+        display: none;
+    }
+    .footerlogo{
+        padding-top: 10px;
+    }
+    .footer ul {
+        display: flex;
+        flex-direction: column;
+        margin-left: 120px;
+        margin-bottom: 120px;
+        
+    }
+    
+    .footer ul li {
+        font-weight: bold;
+    }
+    .footericon{
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .marker{
+        position: absolute;
+        display: flex;
+        bottom:-0px;
+        right: 30px;
+      top: 150px;
+      left: 40px;
+      padding-bottom: 100px;
+    }
+    .icon {
+        margin-left: 20px;
+    }
+    .wishman{
+        width: 200px;
+        height: 200px;
+    }
+    .hamburger-container{
+        width: 20px;
+        height: 20px;
+        display: block;
+        position:relative;
+        top: 16px;
+        
+        
+    }
+    .hamburger-container span {
+        display: block;
+        height: 1px;
+        background: #000;
+        position: relative;
+        transition:transform .3s ease-in-out , top .3s ease-in-out .3s;
+        top:0;
+    }
+    #toggler:checked + label .hamburger-container span:nth-child(1){
+        transform: rotate(45deg);
+        top: 4px;
+        transition: top .3s ease-in-out, transform .3s ease-in-out.3s;
+        /* 先把線條重疊再交叉 */
+    }
+    #toggler:checked + label .hamburger-container span:nth-child(2){
+        transform: rotate(-45deg);
+        top: -4px;
+        transition: top .3s ease-in-out, transform .3s ease-in-out.3s;
+    }
+    .hamburger-container span:nth-child(2){
+        margin-top: 7px;
+    }
+    #burger:checked ~ .mobile {
+        display: block;
+    }
+  
+   
+    .nav-items{
+        background-color:#f5f5ff;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 44px;
+        left: 0;
+        transform: scaleY(0);
+        transition: transform .3s ease-in-out .3s, opacity .3s ease-in-out .3s;
+        transform-origin: 50% 0 ;
+        opacity: 0;
+        z-index: 5000;
+    }
+    #toggler:checked ~ .nav-items{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+    .nav-items ul {
+        display: flex;
+        flex-direction: column;
+        margin-left: 80px;
+        margin-top: 30px;
+    }
+    .nav-items ul li {
+        line-height: 60px;
+        font-size: 36px;
+        font-weight: bold;
+    }
+
+    #search{
+        text-align: center;
+        position: relative;
+        top: -10px;
+        left: -120px;
+        width: 395px;
+        border-radius: 15px;
+    }
+    .findBtn{
+        display: none;
+    }
+    .search img{
+        position: absolute;
+        top: -1px;
+        right: 20px;
+        width: 25px;
+        height: 25px;
+    }
+    .left ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-left: 250px;
+        
+        
+    }
+    .left ul li{
+        display: flex;
+        padding-right: 11px;
+        margin-left: 10px;
+        top: -40px;
+        left: 30px;
+    }
+    .left a{
+        top: 125px;
+        right: 1px;
+    }
+    .left{
+        left: 0;
+        display: flex;
+    }
+    
+    .appList{
+        width: 10px;
+        height: 10px;
+        
+    }
+    .logoIcon{
+        width: 80px;
+        height: 80px;
+        left: -280px;
+        top: 210px;
+    }
+    .bookMark img{
+        width: 10px;
+        height: 10px;
+    }
+    .item{
+        top: 250px;
+    }
+    .bookMark{
+        position: absolute;
+        left: -210px;
+        top: 280px;
+    }
+    .freeApp{
+        position: relative;
+        top: 250px;
+        left: -270px;
+    }
+    
+    .download{
+        position: absolute;
+        left: -210px;
+        top: 310px;
+    }
+    .star {
+        position: relative;
+        top: 220px;
+        left: -220px;
+    }
+    .bold1{
+        display: flex;
+        line-height: 20px;
+        position: relative;
+        top: 220px;
+        left: -270px;
+        font-weight: bold;
+        width: 60px;
+        padding-top: 10px;
+    }
+    .bold2{
+        display: flex;
+        line-height: 20px;
+        position: relative;
+        top: 260px;
+        left: -280px;
+        font-weight: bold;
+        width: 100px;
+        padding-top: 10px;
+    }
+    .bold3{
+        display: flex;
+        line-height: 20px;
+        position: relative;
+        top: 180px;
+        left: -280px;
+        font-weight: bold;
+        width: 100px;
+        padding-top: 10px;
+    }
+    .bold4{
+        display: flex;
+        line-height: 20px;
+        position: relative;
+        top: 280px;
+        left: -280px;
+        font-weight: bold;
+        width: 100px;
+        padding-top: 10px;
+    }
+    .bold5{
+        display: flex;
+        line-height: 20px;
+        position: relative;
+        top: 380px;
+        left: -280px;
+        font-weight: bold;
+        width: 100px;
+        padding-top: 10px;
+    }
+    .vertical-lr{
+        writing-mode: vertical-lr;
+    }
+    .app2{
+        padding-top:100px;
+    }
+    .mt4{
+        margin-top: 4px;
+    }
+   .bookMark1{
+    position: absolute;
+    top: 315px;
+    left: -220px;
+   }
+   .download1{
+    position: absolute;
+    top: 360px;
+    left: -220px;
+   }
+   .star1 {
+    position: relative;
+    top: 250px;
+    left: -320px;
+}
+    .game{
+        position: absolute;
+        top: 520px;
+        right: 560px;
+    }
+    .food{
+        position: relative;
+        top: 275px;
+        right: 280px;
+    }
+    .app3{
+        position: absolute;
+        top: 230px;
+    }
+    .appList{
+        padding-bottom: 90px;
+    }
+    .bookMark2{
+        position: absolute;
+        top: 235px;
+        left: -220px;
+       }
+    .download2{
+        position: absolute;
+        top: 280px;
+        left: -220px;
+       }
+       .app4{
+        position: absolute;
+        top: 332px;
+       }
+       .app5{
+        position: absolute;
+        top: 103px;
+        left: -265px;
+       }
+       .bookMark3{
+        position: absolute;
+        top: 336px;
+        left: -220px;
+       }
+    .download3{
+        position: absolute;
+        top: 381px;
+        left: -220px;
+       }
+       .bookMark4{
+        position: absolute;
+        top: 107px;
+        left: -205px;
+       }
+    .download4{
+        position: absolute;
+        top: 151px;
+        left: -205px;
+       }
+       .star2{
+        position: relative;
+        top: 175px;
+        left: -320px;
+       }
+       .star3{
+        position: relative;
+        top: 275px;
+        left: -220px;
+       }
+       .star4{
+        position: relative;
+        top: 375px;
+        left: -205px;
+       }
+       
+}
+@media(max-width: 1000px) {
+    body, html {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        
+    }
+    .desktop {
+        display: none;
+    }
+    .headerham{
+        background-color: #fff;
+        height: 44px;
+        padding: 0 18px;
+       display: block;
+    }
+   .header{
+    position: relative;
+    background-color: #fff;
+   }
+   .logo{
+    position: absolute;
+    left:-50px;
+   }
+    .footer{
+        display: flex;
+        flex-direction: column;
+        height: 600px;
+        line-height: 50px;
+       position: relative;
+       top: 200px;
+    }
+    .border{
+        display: none;
+    }
+    .footerlogo{
+        padding-top: 10px;
+    }
+    .footer ul {
+        display: flex;
+        flex-direction: column;
+        margin-left: 120px;
+        margin-bottom: 120px;
+        
+    }
+    
+    .footer ul li {
+        font-weight: bold;
+    }
+    .footericon{
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .marker{
+        position: absolute;
+        display: flex;
+        bottom:-0px;
+        right: 30px;
+      top: 150px;
+      left: 40px;
+      padding-bottom: 100px;
+    }
+    .icon {
+        margin-left: 20px;
+    }
+    .wishman{
+        width: 200px;
+        height: 200px;
+    }
+    .hamburger-container{
+        width: 20px;
+        height: 20px;
+        display: block;
+        position:relative;
+        top: 16px;
+        
+        
+    }
+    .hamburger-container span {
+        display: block;
+        height: 1px;
+        background: #000;
+        position: relative;
+        transition:transform .3s ease-in-out , top .3s ease-in-out .3s;
+        top:0;
+    }
+    #toggler:checked + label .hamburger-container span:nth-child(1){
+        transform: rotate(45deg);
+        top: 4px;
+        transition: top .3s ease-in-out, transform .3s ease-in-out.3s;
+        /* 先把線條重疊再交叉 */
+    }
+    #toggler:checked + label .hamburger-container span:nth-child(2){
+        transform: rotate(-45deg);
+        top: -4px;
+        transition: top .3s ease-in-out, transform .3s ease-in-out.3s;
+    }
+    .hamburger-container span:nth-child(2){
+        margin-top: 7px;
+    }
+    #burger:checked ~ .mobile {
+        display: block;
+    }
+  
+   
+    .nav-items{
+        background-color:#f5f5ff;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 44px;
+        left: 0;
+        transform: scaleY(0);
+        transition: transform .3s ease-in-out .3s, opacity .3s ease-in-out .3s;
+        transform-origin: 50% 0 ;
+        opacity: 0;
+        z-index: 5000;
+    }
+    #toggler:checked ~ .nav-items{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+    .nav-items ul {
+        display: flex;
+        flex-direction: column;
+        margin-left: 80px;
+        margin-top: 30px;
+    }
+    .nav-items ul li {
+        line-height: 60px;
+        font-size: 36px;
+        font-weight: bold;
+    }
+
+    #search{
+        text-align: center;
+        position: relative;
+        top: -10px;
+        left: -20px;
+        width: 395px;
+        border-radius: 15px;
+    }
+    .findBtn{
+        display: none;
+    }
+    .search img{
+        position: absolute;
+        top: -1px;
+        right: 20px;
+        width: 25px;
+        height: 25px;
+    }
+    .left ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-left: 150px;
+        
+        
+    }
+    .left ul li{
+        display: flex;
+        padding-right: 11px;
+        margin-left: 10px;
+        top: -40px;
+        left: 30px;
+    }
+    .left a{
+        top: 125px;
+        right: 1px;
+    }
+    .left{
+        left: 0;
+        display: flex;
+    }
+    
+    .appList{
+        width: 10px;
+        height: 10px;
+        
+    }
+    .logoIcon{
+        width: 80px;
+        height: 80px;
+        left: -280px;
+        top: 210px;
+    }
+    .bookMark img{
+        width: 10px;
+        height: 10px;
+    }
+    .item{
+        top: 250px;
+    }
+    .bookMark{
+        position: absolute;
+        left: -210px;
+        top: 280px;
+    }
+    .freeApp{
+        position: relative;
+        top: 250px;
+        left: -270px;
+    }
+    
+    .download{
+        position: absolute;
+        left: -210px;
+        top: 310px;
+    }
+    .star {
+        position: relative;
+        top: 220px;
+        left: -220px;
+    }
+    .bold1{
+        display: flex;
+        line-height: 20px;
+        position: relative;
+        top: 220px;
+        left: -270px;
+        font-weight: bold;
+        width: 60px;
+        padding-top: 10px;
+    }
+    .bold2{
+        display: flex;
+        line-height: 20px;
+        position: relative;
+        top: 260px;
+        left: -280px;
+        font-weight: bold;
+        width: 100px;
+        padding-top: 10px;
+    }
+    .bold3{
+        display: flex;
+        line-height: 20px;
+        position: relative;
+        top: 180px;
+        left: -280px;
+        font-weight: bold;
+        width: 100px;
+        padding-top: 10px;
+    }
+    .bold4{
+        display: flex;
+        line-height: 20px;
+        position: relative;
+        top: 280px;
+        left: -280px;
+        font-weight: bold;
+        width: 100px;
+        padding-top: 10px;
+    }
+    .bold5{
+        display: flex;
+        line-height: 20px;
+        position: relative;
+        top: 380px;
+        left: -280px;
+        font-weight: bold;
+        width: 100px;
+        padding-top: 10px;
+    }
+    .vertical-lr{
+        writing-mode: vertical-lr;
+    }
+    .app2{
+        padding-top:100px;
+    }
+    .mt4{
+        margin-top: 4px;
+    }
+   .bookMark1{
+    position: absolute;
+    top: 315px;
+    left: -220px;
+   }
+   .download1{
+    position: absolute;
+    top: 360px;
+    left: -220px;
+   }
+   .star1 {
+    position: relative;
+    top: 250px;
+    left: -320px;
+}
+    .game{
+        position: absolute;
+        top: 520px;
+        right: 460px;
+    }
+    .food{
+        position: relative;
+        top: 260px;
+        right: 285px;
+    }
+    .app3{
+        position: absolute;
+        top: 230px;
+    }
+    .appList{
+        padding-bottom: 90px;
+    }
+    .bookMark2{
+        position: absolute;
+        top: 235px;
+        left: -220px;
+       }
+    .download2{
+        position: absolute;
+        top: 280px;
+        left: -220px;
+       }
+       .app4{
+        position: absolute;
+        top: 332px;
+       }
+       .app5{
+        position: absolute;
+        top: 103px;
+        left: -265px;
+       }
+       .bookMark3{
+        position: absolute;
+        top: 336px;
+        left: -220px;
+       }
+    .download3{
+        position: absolute;
+        top: 381px;
+        left: -220px;
+       }
+       .bookMark4{
+        position: absolute;
+        top: 107px;
+        left: -205px;
+       }
+    .download4{
+        position: absolute;
+        top: 151px;
+        left: -205px;
+       }
+       .star2{
+        position: relative;
+        top: 175px;
+        left: -320px;
+       }
+       .star3{
+        position: relative;
+        top: 275px;
+        left: -220px;
+       }
+       .star4{
+        position: relative;
+        top: 375px;
+        left: -205px;
+       }
+       
+}
+@media(max-width: 770px) {
+    body, html {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        
+    }
+    .desktop {
+        display: none;
+    }
+    .headerham{
+        background-color: #fff;
+        height: 44px;
+        padding: 0 18px;
+       display: block;
+    }
+   .header{
+    position: relative;
+    background-color: #fff;
+   }
+   .logo{
+    position: absolute;
+    left:-50px;
+   }
+    .footer{
+        display: flex;
+        flex-direction: column;
+        height: 600px;
+        line-height: 50px;
+       position: relative;
+       top: 200px;
+    }
+    .border{
+        display: none;
+    }
+    .footerlogo{
+        padding-top: 10px;
+    }
+    .footer ul {
+        display: flex;
+        flex-direction: column;
+        margin-left: 120px;
+        margin-bottom: 120px;
+        
+    }
+    
+    .footer ul li {
+        font-weight: bold;
+    }
+    .footericon{
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .marker{
+        position: absolute;
+        display: flex;
+        bottom:-0px;
+        right: 30px;
+      top: 150px;
+      left: 40px;
+      padding-bottom: 100px;
     }
     .icon {
         margin-left: 20px;
@@ -582,11 +1733,12 @@ body{
         left: -210px;
         top: 280px;
     }
-    .right h1{
+    .freeApp{
         position: relative;
         top: 250px;
         left: -270px;
     }
+    
     .download{
         position: absolute;
         left: -210px;
@@ -673,7 +1825,1465 @@ body{
 }
     .game{
         position: absolute;
+        top: 520px;
+        right: 232px;
+    }
+    .food{
+        position: relative;
+        top: 260px;
+        right: 275px;
+    }
+    .app3{
+        position: absolute;
+        top: 230px;
+    }
+    .appList{
+        padding-bottom: 90px;
+    }
+    .bookMark2{
+        position: absolute;
+        top: 235px;
+        left: -220px;
+       }
+    .download2{
+        position: absolute;
+        top: 280px;
+        left: -220px;
+       }
+       .app4{
+        position: absolute;
+        top: 332px;
+       }
+       .app5{
+        position: absolute;
+        top: 103px;
+        left: -265px;
+       }
+       .bookMark3{
+        position: absolute;
+        top: 336px;
+        left: -220px;
+       }
+    .download3{
+        position: absolute;
+        top: 381px;
+        left: -220px;
+       }
+       .bookMark4{
+        position: absolute;
+        top: 107px;
+        left: -205px;
+       }
+    .download4{
+        position: absolute;
+        top: 151px;
+        left: -205px;
+       }
+       .star2{
+        position: relative;
+        top: 175px;
+        left: -320px;
+       }
+       .star3{
+        position: relative;
+        top: 275px;
+        left: -220px;
+       }
+       .star4{
+        position: relative;
+        top: 375px;
+        left: -205px;
+       }
+       
+}
+@media(max-width: 570px) {
+    body, html {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        
+    }
+    .desktop {
+        display: none;
+    }
+    .headerham{
+        background-color: #fff;
+        height: 44px;
+        padding: 0 18px;
+       display: block;
+    }
+   .header{
+    position: relative;
+    background-color: #fff;
+   }
+   .logo{
+    position: absolute;
+    left:-50px;
+   }
+    .footer{
+        display: flex;
+        flex-direction: column;
+        height: 600px;
+        line-height: 50px;
+       position: relative;
+       top: 200px;
+    }
+    .border{
+        display: none;
+    }
+    .footerlogo{
+        padding-top: 10px;
+    }
+    .footer ul {
+        display: flex;
+        flex-direction: column;
+        margin-left: 120px;
+        margin-bottom: 120px;
+        
+    }
+    
+    .footer ul li {
+        font-weight: bold;
+    }
+    .footericon{
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .marker{
+        position: absolute;
+        display: flex;
+        bottom:-0px;
+        right: 30px;
+      top: 150px;
+      left: 40px;
+      padding-bottom: 100px;
+    }
+    .icon {
+        margin-left: 20px;
+    }
+    .wishman{
+        width: 200px;
+        height: 200px;
+    }
+    .hamburger-container{
+        width: 20px;
+        height: 20px;
+        display: block;
+        position:relative;
+        top: 16px;
+        
+        
+    }
+    .hamburger-container span {
+        display: block;
+        height: 1px;
+        background: #000;
+        position: relative;
+        transition:transform .3s ease-in-out , top .3s ease-in-out .3s;
+        top:0;
+    }
+    #toggler:checked + label .hamburger-container span:nth-child(1){
+        transform: rotate(45deg);
+        top: 4px;
+        transition: top .3s ease-in-out, transform .3s ease-in-out.3s;
+        /* 先把線條重疊再交叉 */
+    }
+    #toggler:checked + label .hamburger-container span:nth-child(2){
+        transform: rotate(-45deg);
+        top: -4px;
+        transition: top .3s ease-in-out, transform .3s ease-in-out.3s;
+    }
+    .hamburger-container span:nth-child(2){
+        margin-top: 7px;
+    }
+    #burger:checked ~ .mobile {
+        display: block;
+    }
+  
+   
+    .nav-items{
+        background-color:#f5f5ff;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 44px;
+        left: 0;
+        transform: scaleY(0);
+        transition: transform .3s ease-in-out .3s, opacity .3s ease-in-out .3s;
+        transform-origin: 50% 0 ;
+        opacity: 0;
+        z-index: 5000;
+    }
+    #toggler:checked ~ .nav-items{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+    .nav-items ul {
+        display: flex;
+        flex-direction: column;
+        margin-left: 80px;
+        margin-top: 30px;
+    }
+    .nav-items ul li {
+        line-height: 60px;
+        font-size: 36px;
+        font-weight: bold;
+    }
+
+    #search{
+        text-align: center;
+        position: relative;
+        top: -10px;
+        left: 105px;
+        width: 395px;
+        border-radius: 15px;
+    }
+    .findBtn{
+        display: none;
+    }
+    .search img{
+        position: absolute;
+        top: -1px;
+        right: 20px;
+        width: 25px;
+        height: 25px;
+    }
+    .left ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-left: 10px;
+        
+        
+    }
+    .left ul li{
+        display: flex;
+        padding-right: 11px;
+        margin-left: 10px;
+        top: -40px;
+        left: 30px;
+    }
+    .left a{
+        top: 125px;
+        right: 1px;
+    }
+    .left{
+        left: 0;
+        display: flex;
+    }
+    
+    .appList{
+        width: 10px;
+        height: 10px;
+        
+    }
+    .logoIcon{
+        width: 80px;
+        height: 80px;
+        left: -280px;
+        top: 210px;
+    }
+    .bookMark img{
+        width: 10px;
+        height: 10px;
+    }
+    .item{
+        top: 250px;
+    }
+    .bookMark{
+        position: absolute;
+        left: -210px;
+        top: 280px;
+    }
+    .freeApp{
+        position: relative;
+        top: 250px;
+        left: -270px;
+    }
+    
+    .download{
+        position: absolute;
+        left: -210px;
+        top: 310px;
+    }
+    .star {
+        position: relative;
+        top: 220px;
+        left: -220px;
+    }
+    .bold1{
+        display: flex;
+        line-height: 20px;
+        position: relative;
+        top: 220px;
+        left: -270px;
+        font-weight: bold;
+        width: 60px;
+        padding-top: 10px;
+    }
+    .bold2{
+        display: flex;
+        line-height: 20px;
+        position: relative;
+        top: 260px;
+        left: -280px;
+        font-weight: bold;
+        width: 100px;
+        padding-top: 10px;
+    }
+    .bold3{
+        display: flex;
+        line-height: 20px;
+        position: relative;
+        top: 180px;
+        left: -280px;
+        font-weight: bold;
+        width: 100px;
+        padding-top: 10px;
+    }
+    .bold4{
+        display: flex;
+        line-height: 20px;
+        position: relative;
+        top: 280px;
+        left: -280px;
+        font-weight: bold;
+        width: 100px;
+        padding-top: 10px;
+    }
+    .bold5{
+        display: flex;
+        line-height: 20px;
+        position: relative;
         top: 380px;
+        left: -280px;
+        font-weight: bold;
+        width: 100px;
+        padding-top: 10px;
+    }
+    .vertical-lr{
+        writing-mode: vertical-lr;
+    }
+    .app2{
+        padding-top:100px;
+    }
+    .mt4{
+        margin-top: 4px;
+    }
+   .bookMark1{
+    position: absolute;
+    top: 315px;
+    left: -220px;
+   }
+   .download1{
+    position: absolute;
+    top: 360px;
+    left: -220px;
+   }
+   .star1 {
+    position: relative;
+    top: 250px;
+    left: -320px;
+}
+    .game{
+        position: absolute;
+        top: 520px;
+        right: 232px;
+    }
+    .food{
+        position: relative;
+        top: 260px;
+        right: 275px;
+    }
+    .app3{
+        position: absolute;
+        top: 230px;
+    }
+    .appList{
+        padding-bottom: 90px;
+    }
+    .bookMark2{
+        position: absolute;
+        top: 235px;
+        left: -220px;
+       }
+    .download2{
+        position: absolute;
+        top: 280px;
+        left: -220px;
+       }
+       .app4{
+        position: absolute;
+        top: 332px;
+       }
+       .app5{
+        position: absolute;
+        top: 103px;
+        left: -265px;
+       }
+       .bookMark3{
+        position: absolute;
+        top: 336px;
+        left: -220px;
+       }
+    .download3{
+        position: absolute;
+        top: 381px;
+        left: -220px;
+       }
+       .bookMark4{
+        position: absolute;
+        top: 107px;
+        left: -205px;
+       }
+    .download4{
+        position: absolute;
+        top: 151px;
+        left: -205px;
+       }
+       .star2{
+        position: relative;
+        top: 175px;
+        left: -320px;
+       }
+       .star3{
+        position: relative;
+        top: 275px;
+        left: -220px;
+       }
+       .star4{
+        position: relative;
+        top: 375px;
+        left: -205px;
+       }
+       
+}
+@media(max-width: 430px) {
+    body, html {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        
+    }
+    .desktop {
+        display: none;
+    }
+    .headerham{
+        background-color: #fff;
+        height: 44px;
+        padding: 0 18px;
+       display: block;
+    }
+   .header{
+    position: relative;
+    background-color: #fff;
+   }
+   .logo{
+    position: absolute;
+    left:-50px;
+   }
+    .footer{
+        display: flex;
+        flex-direction: column;
+        height: 600px;
+        line-height: 50px;
+       position: relative;
+       top: 200px;
+    }
+    .border{
+        display: none;
+    }
+    .footerlogo{
+        padding-top: 10px;
+    }
+    .footer ul {
+        display: flex;
+        flex-direction: column;
+        margin-left: 120px;
+        margin-bottom: 120px;
+        
+    }
+    
+    .footer ul li {
+        font-weight: bold;
+    }
+    .footericon{
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .marker{
+        position: absolute;
+        display: flex;
+        bottom:-0px;
+        right: 30px;
+      top: 150px;
+      left: 40px;
+      padding-bottom: 100px;
+    }
+    .icon {
+        margin-left: 20px;
+    }
+    .wishman{
+        width: 200px;
+        height: 200px;
+    }
+    .hamburger-container{
+        width: 20px;
+        height: 20px;
+        display: block;
+        position:relative;
+        top: 16px;
+        
+        
+    }
+    .hamburger-container span {
+        display: block;
+        height: 1px;
+        background: #000;
+        position: relative;
+        transition:transform .3s ease-in-out , top .3s ease-in-out .3s;
+        top:0;
+    }
+    #toggler:checked + label .hamburger-container span:nth-child(1){
+        transform: rotate(45deg);
+        top: 4px;
+        transition: top .3s ease-in-out, transform .3s ease-in-out.3s;
+        /* 先把線條重疊再交叉 */
+    }
+    #toggler:checked + label .hamburger-container span:nth-child(2){
+        transform: rotate(-45deg);
+        top: -4px;
+        transition: top .3s ease-in-out, transform .3s ease-in-out.3s;
+    }
+    .hamburger-container span:nth-child(2){
+        margin-top: 7px;
+    }
+    #burger:checked ~ .mobile {
+        display: block;
+    }
+  
+   
+    .nav-items{
+        background-color:#f5f5ff;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 44px;
+        left: 0;
+        transform: scaleY(0);
+        transition: transform .3s ease-in-out .3s, opacity .3s ease-in-out .3s;
+        transform-origin: 50% 0 ;
+        opacity: 0;
+        z-index: 5000;
+    }
+    #toggler:checked ~ .nav-items{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+    .nav-items ul {
+        display: flex;
+        flex-direction: column;
+        margin-left: 80px;
+        margin-top: 30px;
+    }
+    .nav-items ul li {
+        line-height: 60px;
+        font-size: 36px;
+        font-weight: bold;
+    }
+
+    #search{
+        text-align: center;
+        position: relative;
+        top: -10px;
+        left: 105px;
+        width: 395px;
+        border-radius: 15px;
+    }
+    .findBtn{
+        display: none;
+    }
+    .search img{
+        position: absolute;
+        top: -1px;
+        right: 20px;
+        width: 25px;
+        height: 25px;
+    }
+    .left ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-left: 10px;
+        
+        
+    }
+    .left ul li{
+        display: flex;
+        padding-right: 11px;
+        margin-left: 10px;
+        top: -40px;
+        left: 30px;
+    }
+    .left a{
+        top: 125px;
+        right: 1px;
+    }
+    .left{
+        left: 0;
+        display: flex;
+    }
+    
+    .appList{
+        width: 10px;
+        height: 10px;
+        
+    }
+    .logoIcon{
+        width: 80px;
+        height: 80px;
+        left: -280px;
+        top: 210px;
+    }
+    .bookMark img{
+        width: 10px;
+        height: 10px;
+    }
+    .item{
+        top: 250px;
+    }
+    .bookMark{
+        position: absolute;
+        left: -210px;
+        top: 280px;
+    }
+    .freeApp{
+        position: relative;
+        top: 250px;
+        left: -270px;
+    }
+    
+    .download{
+        position: absolute;
+        left: -210px;
+        top: 310px;
+    }
+    .star {
+        position: relative;
+        top: 220px;
+        left: -220px;
+    }
+    .bold1{
+        display: flex;
+        line-height: 20px;
+        position: relative;
+        top: 220px;
+        left: -270px;
+        font-weight: bold;
+        width: 60px;
+        padding-top: 10px;
+    }
+    .bold2{
+        display: flex;
+        line-height: 20px;
+        position: relative;
+        top: 260px;
+        left: -280px;
+        font-weight: bold;
+        width: 100px;
+        padding-top: 10px;
+    }
+    .bold3{
+        display: flex;
+        line-height: 20px;
+        position: relative;
+        top: 180px;
+        left: -280px;
+        font-weight: bold;
+        width: 100px;
+        padding-top: 10px;
+    }
+    .bold4{
+        display: flex;
+        line-height: 20px;
+        position: relative;
+        top: 280px;
+        left: -280px;
+        font-weight: bold;
+        width: 100px;
+        padding-top: 10px;
+    }
+    .bold5{
+        display: flex;
+        line-height: 20px;
+        position: relative;
+        top: 380px;
+        left: -280px;
+        font-weight: bold;
+        width: 100px;
+        padding-top: 10px;
+    }
+    .vertical-lr{
+        writing-mode: vertical-lr;
+    }
+    .app2{
+        padding-top:100px;
+    }
+    .mt4{
+        margin-top: 4px;
+    }
+   .bookMark1{
+    position: absolute;
+    top: 315px;
+    left: -220px;
+   }
+   .download1{
+    position: absolute;
+    top: 360px;
+    left: -220px;
+   }
+   .star1 {
+    position: relative;
+    top: 250px;
+    left: -320px;
+}
+    .game{
+        position: absolute;
+        top: 520px;
+        right: 232px;
+    }
+    .food{
+        position: relative;
+        top: 260px;
+        right: 275px;
+    }
+    .app3{
+        position: absolute;
+        top: 230px;
+    }
+    .appList{
+        padding-bottom: 90px;
+    }
+    .bookMark2{
+        position: absolute;
+        top: 235px;
+        left: -220px;
+       }
+    .download2{
+        position: absolute;
+        top: 280px;
+        left: -220px;
+       }
+       .app4{
+        position: absolute;
+        top: 332px;
+       }
+       .app5{
+        position: absolute;
+        top: 103px;
+        left: -265px;
+       }
+       .bookMark3{
+        position: absolute;
+        top: 336px;
+        left: -220px;
+       }
+    .download3{
+        position: absolute;
+        top: 381px;
+        left: -220px;
+       }
+       .bookMark4{
+        position: absolute;
+        top: 107px;
+        left: -205px;
+       }
+    .download4{
+        position: absolute;
+        top: 151px;
+        left: -205px;
+       }
+       .star2{
+        position: relative;
+        top: 175px;
+        left: -320px;
+       }
+       .star3{
+        position: relative;
+        top: 275px;
+        left: -220px;
+       }
+       .star4{
+        position: relative;
+        top: 375px;
+        left: -205px;
+       }
+       
+}
+@media(max-width: 390px) {
+    body, html {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        
+    }
+    .desktop {
+        display: none;
+    }
+    .headerham{
+        background-color: #fff;
+        height: 44px;
+        padding: 0 18px;
+       display: block;
+    }
+   .header{
+    position: relative;
+    background-color: #fff;
+   }
+   .logo{
+    position: absolute;
+    left:-50px;
+   }
+    .footer{
+        display: flex;
+        flex-direction: column;
+        height: 600px;
+        line-height: 50px;
+       position: relative;
+       top: 200px;
+    }
+    .border{
+        display: none;
+    }
+    .footerlogo{
+        padding-top: 10px;
+    }
+    .footer ul {
+        display: flex;
+        flex-direction: column;
+        margin-left: 120px;
+        margin-bottom: 120px;
+        
+    }
+    
+    .footer ul li {
+        font-weight: bold;
+    }
+    .footericon{
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .marker{
+        position: absolute;
+        display: flex;
+        bottom:-0px;
+        right: 30px;
+      top: 150px;
+      left: 40px;
+      padding-bottom: 100px;
+    }
+    .icon {
+        margin-left: 20px;
+    }
+    .wishman{
+        width: 200px;
+        height: 200px;
+    }
+    .hamburger-container{
+        width: 20px;
+        height: 20px;
+        display: block;
+        position:relative;
+        top: 16px;
+        
+        
+    }
+    .hamburger-container span {
+        display: block;
+        height: 1px;
+        background: #000;
+        position: relative;
+        transition:transform .3s ease-in-out , top .3s ease-in-out .3s;
+        top:0;
+    }
+    #toggler:checked + label .hamburger-container span:nth-child(1){
+        transform: rotate(45deg);
+        top: 4px;
+        transition: top .3s ease-in-out, transform .3s ease-in-out.3s;
+        /* 先把線條重疊再交叉 */
+    }
+    #toggler:checked + label .hamburger-container span:nth-child(2){
+        transform: rotate(-45deg);
+        top: -4px;
+        transition: top .3s ease-in-out, transform .3s ease-in-out.3s;
+    }
+    .hamburger-container span:nth-child(2){
+        margin-top: 7px;
+    }
+    #burger:checked ~ .mobile {
+        display: block;
+    }
+  
+   
+    .nav-items{
+        background-color:#f5f5ff;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 44px;
+        left: 0;
+        transform: scaleY(0);
+        transition: transform .3s ease-in-out .3s, opacity .3s ease-in-out .3s;
+        transform-origin: 50% 0 ;
+        opacity: 0;
+        z-index: 5000;
+    }
+    #toggler:checked ~ .nav-items{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+    .nav-items ul {
+        display: flex;
+        flex-direction: column;
+        margin-left: 80px;
+        margin-top: 30px;
+    }
+    .nav-items ul li {
+        line-height: 60px;
+        font-size: 36px;
+        font-weight: bold;
+    }
+
+    #search{
+        text-align: center;
+        position: relative;
+        top: -10px;
+        left: 105px;
+        width: 395px;
+        border-radius: 15px;
+    }
+    .findBtn{
+        display: none;
+    }
+    .search img{
+        position: absolute;
+        top: -1px;
+        right: 20px;
+        width: 25px;
+        height: 25px;
+    }
+    .left ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-left: 10px;
+        
+        
+    }
+    .left ul li{
+        display: flex;
+        padding-right: 11px;
+        margin-left: 10px;
+        top: -40px;
+        left: 30px;
+    }
+    .left a{
+        top: 125px;
+        right: 1px;
+    }
+    .left{
+        left: 0;
+        display: flex;
+    }
+    
+    .appList{
+        width: 10px;
+        height: 10px;
+        
+    }
+    .logoIcon{
+        width: 80px;
+        height: 80px;
+        left: -280px;
+        top: 210px;
+    }
+    .bookMark img{
+        width: 10px;
+        height: 10px;
+    }
+    .item{
+        top: 250px;
+    }
+    .bookMark{
+        position: absolute;
+        left: -210px;
+        top: 280px;
+    }
+    .freeApp{
+        position: relative;
+        top: 250px;
+        left: -270px;
+    }
+    
+    .download{
+        position: absolute;
+        left: -210px;
+        top: 310px;
+    }
+    .star {
+        position: relative;
+        top: 220px;
+        left: -220px;
+    }
+    .bold1{
+        display: flex;
+        line-height: 20px;
+        position: relative;
+        top: 220px;
+        left: -270px;
+        font-weight: bold;
+        width: 60px;
+        padding-top: 10px;
+    }
+    .bold2{
+        display: flex;
+        line-height: 20px;
+        position: relative;
+        top: 260px;
+        left: -280px;
+        font-weight: bold;
+        width: 100px;
+        padding-top: 10px;
+    }
+    .bold3{
+        display: flex;
+        line-height: 20px;
+        position: relative;
+        top: 180px;
+        left: -280px;
+        font-weight: bold;
+        width: 100px;
+        padding-top: 10px;
+    }
+    .bold4{
+        display: flex;
+        line-height: 20px;
+        position: relative;
+        top: 280px;
+        left: -280px;
+        font-weight: bold;
+        width: 100px;
+        padding-top: 10px;
+    }
+    .bold5{
+        display: flex;
+        line-height: 20px;
+        position: relative;
+        top: 380px;
+        left: -280px;
+        font-weight: bold;
+        width: 100px;
+        padding-top: 10px;
+    }
+    .vertical-lr{
+        writing-mode: vertical-lr;
+    }
+    .app2{
+        padding-top:100px;
+    }
+    .mt4{
+        margin-top: 4px;
+    }
+   .bookMark1{
+    position: absolute;
+    top: 315px;
+    left: -220px;
+   }
+   .download1{
+    position: absolute;
+    top: 360px;
+    left: -220px;
+   }
+   .star1 {
+    position: relative;
+    top: 250px;
+    left: -320px;
+}
+    .game{
+        position: absolute;
+        top: 520px;
+        right: 232px;
+    }
+    .food{
+        position: relative;
+        top: 260px;
+        right: 275px;
+    }
+    .app3{
+        position: absolute;
+        top: 230px;
+    }
+    .appList{
+        padding-bottom: 90px;
+    }
+    .bookMark2{
+        position: absolute;
+        top: 235px;
+        left: -220px;
+       }
+    .download2{
+        position: absolute;
+        top: 280px;
+        left: -220px;
+       }
+       .app4{
+        position: absolute;
+        top: 332px;
+       }
+       .app5{
+        position: absolute;
+        top: 103px;
+        left: -265px;
+       }
+       .bookMark3{
+        position: absolute;
+        top: 336px;
+        left: -220px;
+       }
+    .download3{
+        position: absolute;
+        top: 381px;
+        left: -220px;
+       }
+       .bookMark4{
+        position: absolute;
+        top: 107px;
+        left: -205px;
+       }
+    .download4{
+        position: absolute;
+        top: 151px;
+        left: -205px;
+       }
+       .star2{
+        position: relative;
+        top: 175px;
+        left: -320px;
+       }
+       .star3{
+        position: relative;
+        top: 275px;
+        left: -220px;
+       }
+       .star4{
+        position: relative;
+        top: 375px;
+        left: -205px;
+       }
+       
+}
+  @media(max-width: 375px) {
+    body, html {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        
+    }
+    .desktop {
+        display: none;
+    }
+    .headerham{
+        background-color: #fff;
+        height: 44px;
+        padding: 0 18px;
+       display: block;
+    }
+   .header{
+    position: relative;
+    background-color: #fff;
+   }
+   .logo{
+    position: absolute;
+    left:-50px;
+   }
+    .footer{
+        display: flex;
+        flex-direction: column;
+        height: 600px;
+        line-height: 50px;
+       position: relative;
+       top: 200px;
+    }
+    .border{
+        display: none;
+    }
+    .footerlogo{
+        padding-top: 10px;
+    }
+    .footer ul {
+        display: flex;
+        flex-direction: column;
+        margin-left: 120px;
+        margin-bottom: 120px;
+        
+    }
+    
+    .footer ul li {
+        font-weight: bold;
+    }
+    .footericon{
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .marker{
+        position: absolute;
+        display: flex;
+        bottom:-0px;
+        right: 30px;
+      top: 150px;
+      left: 40px;
+      padding-bottom: 100px;
+    }
+    .icon {
+        margin-left: 20px;
+    }
+    .wishman{
+        width: 200px;
+        height: 200px;
+    }
+    .hamburger-container{
+        width: 20px;
+        height: 20px;
+        display: block;
+        position:relative;
+        top: 16px;
+        
+        
+    }
+    .hamburger-container span {
+        display: block;
+        height: 1px;
+        background: #000;
+        position: relative;
+        transition:transform .3s ease-in-out , top .3s ease-in-out .3s;
+        top:0;
+    }
+    #toggler:checked + label .hamburger-container span:nth-child(1){
+        transform: rotate(45deg);
+        top: 4px;
+        transition: top .3s ease-in-out, transform .3s ease-in-out.3s;
+        /* 先把線條重疊再交叉 */
+    }
+    #toggler:checked + label .hamburger-container span:nth-child(2){
+        transform: rotate(-45deg);
+        top: -4px;
+        transition: top .3s ease-in-out, transform .3s ease-in-out.3s;
+    }
+    .hamburger-container span:nth-child(2){
+        margin-top: 7px;
+    }
+    #burger:checked ~ .mobile {
+        display: block;
+    }
+  
+   
+    .nav-items{
+        background-color:#f5f5ff;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 44px;
+        left: 0;
+        transform: scaleY(0);
+        transition: transform .3s ease-in-out .3s, opacity .3s ease-in-out .3s;
+        transform-origin: 50% 0 ;
+        opacity: 0;
+        z-index: 5000;
+    }
+    #toggler:checked ~ .nav-items{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+    .nav-items ul {
+        display: flex;
+        flex-direction: column;
+        margin-left: 80px;
+        margin-top: 30px;
+    }
+    .nav-items ul li {
+        line-height: 60px;
+        font-size: 36px;
+        font-weight: bold;
+    }
+
+    #search{
+        text-align: center;
+        position: relative;
+        top: -10px;
+        left: 105px;
+        width: 395px;
+        border-radius: 15px;
+    }
+    .findBtn{
+        display: none;
+    }
+    .search img{
+        position: absolute;
+        top: -1px;
+        right: 20px;
+        width: 25px;
+        height: 25px;
+    }
+    .left ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-left: 10px;
+        
+        
+    }
+    .left ul li{
+        display: flex;
+        padding-right: 11px;
+        margin-left: 10px;
+        top: -40px;
+        left: 30px;
+    }
+    .left a{
+        top: 125px;
+        right: 1px;
+    }
+    .left{
+        left: 0;
+        display: flex;
+    }
+    
+    .appList{
+        width: 10px;
+        height: 10px;
+        
+    }
+    .logoIcon{
+        width: 80px;
+        height: 80px;
+        left: -280px;
+        top: 210px;
+    }
+    .bookMark img{
+        width: 10px;
+        height: 10px;
+    }
+    .item{
+        top: 250px;
+    }
+    .bookMark{
+        position: absolute;
+        left: -210px;
+        top: 280px;
+    }
+    .freeApp{
+        position: relative;
+        top: 250px;
+        left: -270px;
+    }
+    
+    .download{
+        position: absolute;
+        left: -210px;
+        top: 310px;
+    }
+    .star {
+        position: relative;
+        top: 220px;
+        left: -220px;
+    }
+    .bold1{
+        display: flex;
+        line-height: 20px;
+        position: relative;
+        top: 220px;
+        left: -270px;
+        font-weight: bold;
+        width: 60px;
+        padding-top: 10px;
+    }
+    .bold2{
+        display: flex;
+        line-height: 20px;
+        position: relative;
+        top: 260px;
+        left: -280px;
+        font-weight: bold;
+        width: 100px;
+        padding-top: 10px;
+    }
+    .bold3{
+        display: flex;
+        line-height: 20px;
+        position: relative;
+        top: 180px;
+        left: -280px;
+        font-weight: bold;
+        width: 100px;
+        padding-top: 10px;
+    }
+    .bold4{
+        display: flex;
+        line-height: 20px;
+        position: relative;
+        top: 280px;
+        left: -280px;
+        font-weight: bold;
+        width: 100px;
+        padding-top: 10px;
+    }
+    .bold5{
+        display: flex;
+        line-height: 20px;
+        position: relative;
+        top: 380px;
+        left: -280px;
+        font-weight: bold;
+        width: 100px;
+        padding-top: 10px;
+    }
+    .vertical-lr{
+        writing-mode: vertical-lr;
+    }
+    .app2{
+        padding-top:100px;
+    }
+    .mt4{
+        margin-top: 4px;
+    }
+   .bookMark1{
+    position: absolute;
+    top: 315px;
+    left: -220px;
+   }
+   .download1{
+    position: absolute;
+    top: 360px;
+    left: -220px;
+   }
+   .star1 {
+    position: relative;
+    top: 250px;
+    left: -320px;
+}
+    .game{
+        position: absolute;
+        top: 520px;
+        right: 232px;
+    }
+    .food{
+        position: relative;
+        top: 260px;
+        right: 275px;
     }
     .app3{
         position: absolute;
