@@ -48,6 +48,7 @@ function check() {
         }
 
         function registerUser() {
+            
             let userData = {
                 account: email,
                 password: password,
@@ -55,7 +56,12 @@ function check() {
                 birthday: dateValue
             };
 
+
             dataList.push(userData);
+            if(password!==passwordCheck){
+                alert('請確認重複密碼是否一致')
+                return;
+            }
             alert('註冊成功');
             fetch('http://localhost:3000/users', {
                 method: 'POST',
@@ -72,12 +78,8 @@ function check() {
             
             window.location.href = 'https://gebyman.github.io/personal/login.html';
         }
-
-        if (email != 0 && password != 0 && password === passwordCheck && dateValue != 0) {
-            emailCheck.innerHTML = '';
-        } else {
-            alert('帳戶或密碼輸入錯誤');
-        }
+        
+        
     });
 
     
