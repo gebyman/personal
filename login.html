@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登入</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/login.css" />
+    <link rel="icon" href="img/WishesMan.png">
+</head>    
+<body>
+    <div class="container">
+        <div class="frame">
+            <div class="title">
+                <a href="https://gebyman.github.io/personal/index.html"><img src="img/thumb.png" alt="logo"></a>
+                <a href="https://gebyman.github.io/personal/index.html"><span>好用APP</span></a>
+            </div>
+        </div>
+        <form action="example.php" method="get">
+            <div class="register">
+                    <h1>使用者登入</h1>
+            </div>
+            <div class="content">
+                <p>帳號</p>
+            </div>
+            <div class="content" style="display: flex;flex-direction: column; ">
+                <p><input type="text" name="user" autofocus class="account"></p>
+                <p class="accountMessage" style="color: red; font-size: 16px; "></p>
+            </div>
+ 
+            <div class="content">
+                <p>密碼</p>
+            </div>
+            <div class="content" style="display: flex;flex-direction: column; ">
+                <p><input type="password" name="pwd" required class="password"></p>
+                <p class="passwordMessage" style="color: red; font-size: 16px; "></p>
+            </div>
+
+            <div class="content">
+                <p><input type="button" value="登入" class="loginBtn"></p>
+            </div>
+            <div class="content">
+                <p><input type="button" value="忘記密碼"></p>
+            </div>
+        </form>
+    </div>
+    
+    <script src="js/login.js"></script>
+</body>
+</html>
