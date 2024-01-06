@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register1-1.html</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/register.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dhurjati&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>    
+<body>
+   
+        <div class="frame">
+            <div class="title">
+                <a href="https://ltwang0618.github.io/1121207/index1test.html"><span>好用APP</span></a>
+            </div>
+        </div>
+        <form action="example.php" method="get">
+            <div class="register">
+                    <h1>新會員註冊</h1>
+            </div>
+            <div class="content">
+                <p>帳號</p>
+            </div>
+            <div class="content" style="display: flex; flex-direction: column;">
+                <p><input type="text" name="user" autofocus class="email"></p>
+                <p class="messageEmail" style="font-size: 16px; color: red;"></p>
+                <p class="emailCheck" style="font-size: 16px; color: red;"></p>
+            </div>
+
+            <div class="content">
+                <p>使用者名稱</p>
+            </div>
+            <div class="content" style="display: flex; flex-direction: column;">
+                <p><input type="text" name="user" autofocus class="userName"></p>
+                <p class="messageuserName" style="font-size: 16px; color: red;"></p>
+            </div>
+
+            <div class="content">
+                <p>密碼</p>
+            </div>
+            <div class="content" style="display: flex; flex-direction: column;">
+                <p><input type="password" name="pwd" required class="password"></p>
+                <p class="messagepassword" style="font-size: 16px; color: red;"></p>
+            </div>
+            <div class="content" >
+                <p>確認密碼</p>
+            </div>
+            <div class="content" style="display: flex; flex-direction: column;">
+                <p><input type="password" name="pwd" required class="passwordCheck"></p>
+                <p class="messagepasswordCheck" style="font-size: 16px; color: red;"></p>
+            </div>
+            <div class="content">
+                <p>生日</p>
+            </div>
+            <div class="content">
+                <p><input type="date" name="dd" class="date"></p>
+            </div>
+            <div class="content">
+                <p><input type="button" value="註冊" class="btn"></p>
+            </div>
+        </form>
+    </div>
+    <script src="js/register.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>
+
