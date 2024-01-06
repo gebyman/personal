@@ -70,7 +70,7 @@ function check() {
             });
 
             
-           
+            window.location.href = 'https://gebyman.github.io/personal/login.html';
         }
 
         if (email != 0 && password != 0 && password === passwordCheck && dateValue != 0) {

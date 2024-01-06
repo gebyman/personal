@@ -31,6 +31,13 @@
       "userName": "asd",
       "birthday": "2024-01-16",
       "id": 5
+    },
+    {
+      "account": "axs123@gmail.com",
+      "password": "qwe",
+      "userName": "qwe",
+      "birthday": "2024-01-24",
+      "id": 6
     }
   ]
 }
