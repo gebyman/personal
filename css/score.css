@@ -1,0 +1,297 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0 auto;
+    min-width: auto;
+    min-height: 100%;
+    position: relative;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header ul {
+    display: flex;
+    align-items: center;
+    padding-right: 60px;
+}
+.header ul li {
+    margin-right: 10px;
+}
+.header ul li a {
+    text-decoration: none;
+
+}
+
+.border{
+    width: 1px;
+    height: 20px;
+    border-radius: 15%;
+    background: rgb(141, 141, 141);
+    margin-right: 10px;
+}
+
+.logo{
+    margin-left: 50px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+    background: #F2F2F5;
+    margin-top: auto;
+    position: absolute;
+    width: -webkit-fill-available;
+}
+
+.footerlogo{
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: -10px;
+}
+.footer ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 120px;
+}
+.footer ul li{
+    margin-right: 20px;
+}
+.footer ul li a {
+    text-decoration: none;
+    font-family: 'cwTeXYen', sans-serif;
+}
+.icon{
+    margin-left: -20px;
+}
+
+.footericon{
+    position: relative;
+}
+.marker{
+    position: absolute;
+    display: flex;
+    bottom:-40px;
+    right: 900px;
+}
+
+#toggler{
+    display: none;
+}
+.headerham{
+    display: none;
+}
+.wrap {
+    flex: 1;
+    width: 800px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+.top{
+    display: flex;
+    justify-content: center;
+}
+.topWord{
+    text-align: center;
+    line-height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+.topImg img {
+    width: 200px;
+    height: 200px;
+}
+.star{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 60px;
+    font-size: 20px;
+    line-height: 40px;
+}
+.star progress{
+    font-size: 16px;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.btn button{
+    margin-left: 60px;
+    font-size: 24px;
+    background: #5350fa;
+    border: none;
+    border-radius: 1ch;
+    width: 120px;
+    color: #FFF;
+}
+.btnn:hover{
+    background: #cfe6fd;
+    color: #5350fa;
+}
+.information{
+    font-size: 24px;
+    font-weight: bold;
+}
+.size{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.informationBorder{
+    width: 800px;
+    height: 1px;
+    background: #000;
+}
+.informationBottom{
+    margin-bottom: 60px;
+}
+.comment h3{
+    font-size: 18px;
+    font-weight: bold;
+}
+.comment{
+    line-height: 20px;
+}
+.commentbuttom{
+    text-align: right;
+    margin-right: 10px;
+}
+.commentBtn{
+    border: none;
+    background: #5350fa;
+    border-radius: 1ch;
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.commentBtn:hover{
+    background: #cfe6fd;
+    color: #5350fa;
+}
+.commentBorder{
+    width: 800px;
+    height: 1px;
+    background: rgb(188, 185, 185);
+
+}
+.commentModal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.4rem;
+    width: 450px;
+    padding: 2rem;
+    min-height: 300px;
+    top: 20%;
+    left: 35%;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    position: fixed;
+}
+.commentTitle{
+    display: flex;
+    justify-content: space-between;
+}
+.commentBtnClose{
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+}
+.commentWord textarea{
+    width: 450px;
+}
+.commentConfirm{
+    display: flex;
+    justify-content: flex-end;
+}
+.commentBtnConfirm{
+    padding: 10px 20px;
+    background-color: rgba(75, 73, 201, 1);
+    border: none;
+    border-radius: 60px;
+    color: white;
+}
+.commentBtnConfirm:hover{
+    background: #cfe6fd;
+    color: #5350fa;
+}
+
+.shareModal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+    padding: 2rem;
+    min-height: 100px;
+    top: 20%;
+    left: 35%;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    position: fixed;
+}
+.shareBtnClose{
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+}
+.shareTitle{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.icon{
+    display: flex;
+    justify-content: space-between;
+}
+.facebook{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.instagram{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.x{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.line{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 8px;
+}
+.line span{
+    margin-top: 12px;
+}
+.hidden{
+    display: none;
+}
+.mt10{
+    margin-top: 10px;
+    font-weight: bold;
+}
